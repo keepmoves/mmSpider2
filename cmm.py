@@ -80,7 +80,7 @@ if __name__ == '__main__':
     pageCnt = 0;
     for x in os.listdir(pathRoot):
         pageCnt += 1
-    pageCnt = pageCnt - 3 
+    pageCnt = pageCnt - 4 
     for page in range(1,66):
         if (page == 1):
 	    html = 'http://www.mm131.com/xiaohua/'
@@ -117,7 +117,9 @@ if __name__ == '__main__':
                 continue
             pos = 'Page:\t' +str(page)+'/65'+ '\tNo:\t' + str(numInPage)+'/20'
             print pos
+            print datail[1]
             fLog.write(str(numInPage))
+            fLog.write(detail[1])
             numInPage += 1
             fLog.write('\n')
             #print detail[0],detail[1]
